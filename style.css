@@ -5,6 +5,7 @@ body {
   margin: 0;
   font-family: "SomeType Mono";
   font-weight: 400;
+  padding: 2% 0;
 }
 
 .background {
@@ -12,8 +13,7 @@ body {
   width: 100vw;
   position: fixed;
   background-image: url("./assets/paper-bg-1.jpg");
-  background-size: cover;
-  padding: 2% 0;
+  background-size: 100vh;
 }
 
 main {
@@ -28,6 +28,8 @@ main {
 .logo-container {
   width: 100vw;
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
   padding: 2% 0 0 0;
 }
@@ -51,8 +53,13 @@ main {
 }
 
 .tagline {
-  font-size: 32px;
+  font-size: 30px;
+  padding-bottom: 2%;
 }
+
+.secondary-content {
+    padding: 3% 0 0 0;
+  }
 
 .secondary-tagline {
   padding-top: 4%;
@@ -67,7 +74,9 @@ main {
   gap: 10px;
 }
 
-button {
+.button {
+  background-color: #fbf7f5;
+  text-align: center;
   cursor: pointer;
   font-weight: 600;
   font-family: "SomeType Mono";
@@ -77,6 +86,9 @@ button {
   height: 36px;
   font-size: small;
   border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .x-handles-container {
@@ -84,6 +96,10 @@ button {
   display: flex;
   justify-content: end;
   padding: 2% 6% 0% 0%;
+}
+
+.x-handles {
+    padding-right: 2%;
 }
 
 /* Responsive design for smaller screens */
@@ -103,43 +119,70 @@ button {
 
 @media (max-width: 480px) {
   .logo-container {
-    padding-top: 0;
+    padding: 0;
     width: 100vw;
-    height: 20vh;
+    height: 30vh;
   }
 
   .mlrc-logo {
-    /* position: relative; */
-    width: 60%;
-    height: 100%;
+    position: absolute;
+    top: 10px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    object-fit: fill;
   }
 
   .mlrc-title {
     padding: 0;
     margin: 0;
     position: absolute;
-    top: 20vh;
+    top: 220px;
+    font-size: 16px;
+  }
+
+  .tagline,
+  .secondary-tagline {
+    width: 90%;
   }
 
   .tagline {
-    padding: 6% 0 3% 0;
-    font-size: 20px;
+    padding: 10% 3% 0 3%;
+    width: auto;
+    /* width: 60%; */
+    /* height: 10%; overflow: hidden; */
+    font-size: 36px;
   }
 
   .secondary-tagline {
-    width: 100%;
     font-size: 14px;
   }
 
   .button-container {
+    position: absolute;
+    bottom: 15%;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 3% 0;
+    gap: 18px;
+    width: 100vw;
   }
 
-  
-.x-handles-container {
+  .button {
+    font-size: large;
+    height: 60px;
+  }
+
+  .secondary-content {
+    position: absolute;
+    bottom: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+  }
+
+  .x-handles-container {
     width: 100vw;
     display: flex;
     justify-content: center;
