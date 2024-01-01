@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css2?family=Sometype+Mono:ital@0;1&display=swap");
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "SomeType Mono";
+  font-weight: 400;
+}
+
+.background {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  background-image: url("./assets/paper-bg-1.jpg");
+  background-size: cover;
+  padding: 2% 0;
+}
+
+main {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.logo-container {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  padding: 2% 0 0 0;
+}
+
+.mlrc-logo {
+  position: relative;
+  width: 27.5%;
+  max-width: 300px;
+}
+
+.mlrc-title {
+  font-size: medium;
+  font-weight: 500;
+}
+
+.tagline,
+.secondary-tagline {
+  padding-top: 2%;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.tagline {
+  font-size: 32px;
+}
+
+.secondary-tagline {
+  padding-top: 4%;
+  font-size: 16px;
+}
+
+.button-container {
+  padding-top: 2%;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+button {
+  cursor: pointer;
+  font-weight: 600;
+  font-family: "SomeType Mono";
+  width: 80%;
+  max-width: 200px;
+  border-radius: 6px;
+  height: 36px;
+  font-size: small;
+  border: none;
+}
+
+.x-handles-container {
+  width: 100vw;
+  display: flex;
+  justify-content: end;
+  padding: 2% 6% 0% 0%;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .tagline {
+    font-size: 24px;
+  }
+
+  .secondary-tagline {
+    font-size: 14px;
+  }
+
+  button {
+    width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-container {
+    padding-top: 0;
+    width: 100vw;
+    height: 20vh;
+  }
+
+  .mlrc-logo {
+    /* position: relative; */
+    width: 60%;
+    height: 100%;
+  }
+
+  .mlrc-title {
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 20vh;
+  }
+
+  .tagline {
+    padding: 6% 0 3% 0;
+    font-size: 20px;
+  }
+
+  .secondary-tagline {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3% 0;
+  }
+
+  
+.x-handles-container {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    padding: 2% 6% 0% 0%;
+  }
+
+  .x-handles {
+    font-size: 12px;
+  }
+}
